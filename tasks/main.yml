@@ -1,0 +1,21 @@
+---
+- name: install hostapd and haveged
+  apt:
+    name: ['hostapd', 'haveged']
+    state: present
+    install_recommends: no
+  notify: restart hostapd
+
+- name: configure {{ hostapd_default }}
+  template:
+    src: etc/default/hostapd.j2
+    dest: "{{ hostapd_default }}"
+    mode: 0644
+  notify: restart hostapd
+
+- name: configure {{ hostapd_default_daemon_conf }}
+  template:
+    src: etc/hostapd.conf.j2
+    dest: "{{ hostapd_default_daemon_conf }}"
+    mode: 0644
+  notify: restart hostapd

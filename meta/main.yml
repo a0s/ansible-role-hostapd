@@ -1,0 +1,22 @@
+galaxy_info:
+  role_name: hostapd
+  author: Anton Osenenko
+  description: Set-up hostapd
+  license: MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+        - bionic
+        - xenial
+        - trusty
+    - name: Debian
+      versions:
+        - buster
+        - stretch
+        - jessie
+  galaxy_tags:
+    - security
+    - networking
+dependencies: []

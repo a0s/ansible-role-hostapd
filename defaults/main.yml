@@ -1,0 +1,5 @@
+---
+hostapd_conf: []
+hostapd_default: "/etc/default/hostapd"
+hostapd_default_daemon_conf: "/etc/hostapd.conf"
+hostapd_default_daemon_opts: ""
