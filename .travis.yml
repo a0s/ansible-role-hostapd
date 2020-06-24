@@ -1,12 +1,6 @@
 ---
 sudo: required
-
-jobs:
-  include:
-    - os: linux
-      arch: amd64
-    - os: linux
-      arch: arm64
+dist: xenial
 
 language: python
 python: "2.7"
